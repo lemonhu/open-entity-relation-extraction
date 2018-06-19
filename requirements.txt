@@ -1,0 +1,4 @@
+pynlpir==0.5.2
+ctypes==1.1.0
+pyltp==0.2.1
+py2neo==3.1.2
