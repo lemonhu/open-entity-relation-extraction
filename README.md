@@ -48,7 +48,7 @@ python extract_demo.py
 
 ### Main Implementation Content
 
-![DSNF](https://github-1251903863.cos.ap-shanghai.myqcloud.com/Two%20kinds%20of%20definitions%20of%20DSNFs%20and%20the%20triples%20.png)
+![DSNF](https://github-1251903863.cos.ap-shanghai.myqcloud.com/Two%20kinds%20of%20definitions%20of%20DSNFs%20and%20the%20triples%20are%20available%20to%20extract%20from%20DSNFs.png)
 
 ### Paper Cite
 
