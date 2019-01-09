@@ -22,16 +22,17 @@ knowledge_extraction/
 |-- data/ # data directory
 |   |-- input_text.txt  # input text file
 |   |-- knowledge_triple.json  # output knowledge triples file
-|-- model/  # ltp models
+|-- ltp-models/  # ltp models, can downloaded from http://ltp.ai/download.html, select ltp_data_v3.4.0.zip
 |-- resource  # dictionaries dirctory
 |-- requirements.txt  # dependent python libraries
 |-- README.md  # project description
 ```
 
-### Development environment
+### Requirements
 
-- Ubuntu 16.04
-- Python 3.6
+- Python>=3.6
+- pynlpir==0.5.2
+- pyltp==0.2.1
 
 ### Install Dependent libraries
 
