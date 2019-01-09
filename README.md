@@ -22,7 +22,7 @@ knowledge_extraction/
 |-- data/ # data directory
 |   |-- input_text.txt  # input text file
 |   |-- knowledge_triple.json  # output knowledge triples file
-|-- ltp-models/  # ltp models, can downloaded from http://ltp.ai/download.html, select ltp_data_v3.4.0.zip
+|-- ltp-models/  # ltp models, can be downloaded from http://ltp.ai/download.html, select ltp_data_v3.4.0.zip
 |-- resource  # dictionaries dirctory
 |-- requirements.txt  # dependent python libraries
 |-- README.md  # project description
