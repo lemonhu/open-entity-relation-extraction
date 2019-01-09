@@ -31,8 +31,8 @@ knowledge_extraction/
 ### Requirements
 
 - Python>=3.6
-- pynlpir==0.5.2
-- pyltp==0.2.1
+- pynlpir>=0.5.2
+- pyltp>=0.2.1
 
 ### Install Dependent libraries
 
@@ -51,7 +51,7 @@ python extract_demo.py
 
 ![DSNF](https://github-1251903863.cos.ap-shanghai.myqcloud.com/Two%20kinds%20of%20definitions%20of%20DSNFs%20and%20the%20triples%20are%20available%20to%20extract%20from%20DSNFs.png)
 
-### Paper Cite
+### Reference
 
 If you use the code, please kindly cite the following paper:
 
