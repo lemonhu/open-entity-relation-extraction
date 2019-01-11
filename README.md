@@ -1,6 +1,8 @@
 ## Chinese Open Entity Relation Extraction
 
-The content of this work is to extract entity relations based on dependency syntax for open domain. Welcome to star or fork.
+The content of this work is to extract entity relations based on dependency syntax for open domain.
+
+Welcome to watch, star or fork.
 
 ### Extraction Example
 
