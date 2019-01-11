@@ -1,5 +1,7 @@
 ## Chinese Open Entity Relation Extraction
 
+The content of this work is to extract entity relations based on dependency syntax for open domain. Welcome to star or fork.
+
 ### Extraction Example
 
 > "中国国家主席习近平访问韩国，并在首尔大学发表演讲"
@@ -30,7 +32,8 @@ knowledge_extraction/
 
 ### Requirements
 
-- Python>=3.6
+This repo was tested on Python 3.5+. The requirements are:
+
 - pynlpir>=0.5.2
 - pyltp>=0.2.1
 
@@ -51,7 +54,7 @@ python extract_demo.py
 
 ![DSNF](https://github-1251903863.cos.ap-shanghai.myqcloud.com/Two%20kinds%20of%20definitions%20of%20DSNFs%20and%20the%20triples%20are%20available%20to%20extract%20from%20DSNFs.png)
 
-### Reference
+### References
 
 If you use the code, please kindly cite the following paper:
 
