@@ -26,7 +26,7 @@ knowledge_extraction/
 |-- data/ # data directory
 |   |-- input_text.txt  # input text file
 |   |-- knowledge_triple.json  # output knowledge triples file
-|-- ltp-models/  # ltp models, can be downloaded from http://ltp.ai/download.html, select ltp_data_v3.4.0.zip
+|-- model/  # ltp models, can be downloaded from http://ltp.ai/download.html, select ltp_data_v3.4.0.zip
 |-- resource  # dictionaries dirctory
 |-- requirements.txt  # dependent python libraries
 |-- README.md  # project description
@@ -54,7 +54,7 @@ python extract_demo.py
 
 ### Main Implementation Content
 
-![DSNF](https://github-1251903863.cos.ap-shanghai.myqcloud.com/Two%20kinds%20of%20definitions%20of%20DSNFs%20and%20the%20triples%20are%20available%20to%20extract%20from%20DSNFs.png)
+![DSNF](./img/DSNF.png)
 
 ### References
 
