@@ -2,6 +2,8 @@
 
 The content of this work is to extract entity relations based on dependency syntax for open domain.
 
+本工作内容为基于依存句法分析，面向开放域的实体和关系抽取。
+
 Welcome to watch, star or fork.
 
 ### Extraction Example
