@@ -1,8 +1,8 @@
 ## Chinese Open Entity Relation Extraction
 
-The content of this work is to extract entity relations based on dependency syntax for open domain.
+The content of this work is to extract knowledge triples (entities and relations) based on dependency syntax for open domain text.
 
-本工作内容为基于依存句法分析，面向开放域的实体和关系抽取。
+本工作内容为基于依存句法分析，实现面向开放域文本的知识三元组抽取（实体和关系抽取）。
 
 Welcome to watch, star or fork.
 
