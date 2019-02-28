@@ -1,12 +1,12 @@
-## Chinese Open Entity Relation Extraction
+# open-entity-relation-extraction
 
-The content of this work is to extract knowledge triples (entities and relations) based on dependency syntax for open domain text.
+Knowledge triples extraction (entities and relations extraction) and knowledge base construction based on dependency syntax for open domain text.
 
-本工作内容为基于依存句法分析，实现面向开放域文本的知识三元组抽取（实体和关系抽取）。
+基于依存句法分析，实现面向开放域文本的知识三元组抽取（实体和关系抽取）及知识库构建。
 
 Welcome to watch, star or fork.
 
-### Extraction Example
+## Example
 
 > "中国国家主席习近平访问韩国，并在首尔大学发表演讲"
 
@@ -16,7 +16,7 @@ We can extract knowledge triples from the sentence as follows:
 - (习近平, 访问, 韩国)
 - (习近平, 发表演讲, 首尔大学)
 
-### Project Structure
+## Project Structure
 
 ```
 knowledge_extraction/
@@ -34,31 +34,25 @@ knowledge_extraction/
 |-- README.md  # project description
 ```
 
-### Requirements
+## Requirements
 
 This repo was tested on Python 3.5+. The requirements are:
 
 - pynlpir>=0.5.2
 - pyltp>=0.2.1
 
-### Install Dependent libraries
-
-```
-pip install -r requirements.txt
-```
-
-### Entry procedure
+## Quickstart
 
 ```shell
 cd ./code/demo/
 python extract_demo.py
 ```
 
-### Main Implementation Content
+## Seven DSNF paradigms
 
 ![DSNF](./img/DSNF.png)
 
-### References
+## References
 
 If you use the code, please kindly cite the following paper:
 
