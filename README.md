@@ -38,7 +38,7 @@ knowledge_extraction/
 
 This repo was tested on Python 3.5+. The requirements are:
 
-- pynlpir>=0.5.2
+- jieba>=0.39
 - pyltp>=0.2.1
 
 ## Quickstart

@@ -31,7 +31,7 @@ class ExtractByDSNF:
         """
         # 候选实体词性列表
         # 人名，机构名，地名，其他名词，缩略词
-        entity_postags = ['nh', 'ni', 'ns', 'nz', 'j']
+        entity_postags = {'nh', 'ni', 'ns', 'nz', 'j'}
         if entry.postag in entity_postags:
             return True
         else:
@@ -76,7 +76,7 @@ class ExtractByDSNF:
         #  'n'<--->general noun          'i'<--->idiom                 'j'<--->abbreviation
         # 'ni'<--->organization name    'nh'<--->person name          'nl'<--->location noun
         # 'ns'<--->geographical name    'nz'<--->other proper noun    'ws'<--->foreign words
-        noun = ['n', 'i', 'j', 'ni', 'nh', 'nl', 'ns', 'nz', 'ws']
+        noun = {'n', 'i', 'j', 'ni', 'nh', 'nl', 'ns', 'nz', 'ws'}
         if entry.postag in noun:
             return True
         else:
@@ -130,7 +130,7 @@ class ExtractByDSNF:
         element_str = ''
         if isinstance(element, list):
             for ele in element:
-                if ele:
+                if isinstance(ele, WordUnit):
                     element_str += ele.lemma
         else:
             element_str = element.lemma

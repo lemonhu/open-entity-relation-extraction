@@ -1,4 +1,5 @@
-import pynlpir
+# import pynlpir
+import jieba
 from ctypes import c_char_p
 
 from pyltp import SentenceSplitter, Postagger, NamedEntityRecognizer, Parser
@@ -25,7 +26,7 @@ class NLP:
         self.default_user_dict_dir = user_dict_dir
         self.default_model_dir = model_dir
         # 初始化分词器
-        pynlpir.open()  # 初始化分词器
+        # pynlpir.open()  # 初始化分词器
         # 添加用户词典(法律文书大辞典与清华大学法律词典)，这种方式是添加进内存中，速度更快
         files = os.listdir(user_dict_dir)
         for file in files:
@@ -33,11 +34,13 @@ class NLP:
             # 文件夹则跳过
             if os.path.isdir(file):
                 continue
-            with open(file_path, 'r') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 line = f.readline()
                 while line:
                     word = line.strip('\n').strip()
-                    pynlpir.nlpir.AddUserWord(c_char_p(word.encode()))
+                    jieba.add_word(word)
+                    # print(c_char_p(word.encode()))
+                    # pynlpir.nlpir.AddUserWord(c_char_p(word.encode()))
                     line = f.readline()
 
         # 加载ltp模型
@@ -65,11 +68,13 @@ class NLP:
         # 添加实体词典
         if entity_postag:
             for entity in entity_postag:
-                pynlpir.nlpir.AddUserWord(c_char_p(entity.encode()))
-        pynlpir.nlpir.AddUserWord(c_char_p('前任'.encode()))  # 单个用户词加入示例
-        pynlpir.nlpir.AddUserWord(c_char_p('习近平'.encode()))  # 单个用户词加入示例
+                # pynlpir.nlpir.AddUserWord(c_char_p(entity.encode()))
+                jieba.add_word(entity)
+        # pynlpir.nlpir.AddUserWord(c_char_p('前任'.encode()))  # 单个用户词加入示例
+        # pynlpir.nlpir.AddUserWord(c_char_p('习近平'.encode()))  # 单个用户词加入示例
         # 分词，不进行词性标注
-        lemmas = pynlpir.segment(sentence, pos_tagging=False)
+        # lemmas = pynlpir.segment(sentence, pos_tagging=False)
+        lemmas = jieba.lcut(sentence)
         # pynlpir.close()  # 释放
         return lemmas
 
@@ -142,7 +147,7 @@ class NLP:
 
     def close(self):
         """关闭与释放nlp"""
-        pynlpir.close()
+        # pynlpir.close()
         self.postagger.release()
         self.recognizer.release()
         self.parser.release()
