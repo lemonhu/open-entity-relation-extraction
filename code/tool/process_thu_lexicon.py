@@ -13,8 +13,8 @@ def get_lexicon(input_path, output_path,):
         output_path: string, 存储处理后的词典文件
     """
     words = ''
-    with open(input_path, 'r') as fin, \
-        open(output_path, 'a') as fout:
+    with open(input_path, 'r', encoding='utf-8') as fin, \
+        open(output_path, 'a', encoding='utf-8') as fout:
 
         for line in fin:
             seg = line.strip('\r\n').split('\t')
@@ -30,6 +30,6 @@ if __name__ == '__main__':
     # 删除已存在的词典文件并重新创建
     if os.path.exists(output_path) and os.path.isfile(output_path):
         os.remove(output_path)
-        os.mknod(output_path)
+        # os.mknod(output_path)
 
     get_lexicon(input_path, output_path)

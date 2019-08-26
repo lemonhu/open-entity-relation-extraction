@@ -1,2 +1,2 @@
-pynlpir==0.5.2
+jieba
 pyltp==0.2.1

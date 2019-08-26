@@ -54,7 +54,7 @@ class EntityCombine:
             word = words[i]
             # 词合并: (前后词都是实体) and (前后词的词性相同 or 前词 in ["nz", "j"] or 后词 in ["nz", "j"])
             if (self.is_entity(word.postag) and self.is_entity(words[i-1].postag) 
-                and (word.postag in ['nz', 'j'] or words[i-1].postag in ['nz', 'j'])):
+                and (word.postag in {'nz', 'j'} or words[i-1].postag in {'nz', 'j'})):
                 newword += word.lemma
             else:
                 words_combine.append(WordUnit(n, newword, words[i-1].postag))  # 添加上一个词
@@ -90,7 +90,7 @@ class EntityCombine:
         """
         flag = False  # 默认该词标志不为实体
         # 地名，机构名，人名，其他名词，缩略词
-        if netag in ['ns', 'ni', 'nh', 'nz', 'j']:
+        if netag in {'ns', 'ni', 'nh', 'nz', 'j'}:
             flag = True
         return flag
 
